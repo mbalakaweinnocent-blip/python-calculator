@@ -11,20 +11,20 @@ memory = 0.0
 # -----------------------------
 # Arithmetic Functions
 # -----------------------------
-def add(a, b): return a + b
-def subtract(a, b): return a - b
-def multiply(a, b): return a * b
+def add(a, b): return a+b
+def subtract(a, b): return a-b
+def multiply(a, b): return a*b
 def divide(a, b):
     if b == 0:
         messagebox.showerror("Error", "Division by zero is not allowed.")
         return None
-    return a / b
+    return a/b
 def modulus(a, b):
     if b == 0:
         messagebox.showerror("Error", "Division by zero is not allowed.")
         return None
     return a % b
-def power(a, b): return a ** b
+def power(a, b): return a**b
 def square_root(a):
     if a < 0:
         messagebox.showerror("Error", "Square root of negative number is not allowed.")
@@ -50,7 +50,7 @@ def clear_history():
 def memory_add(value):
     global memory
     memory += value
-    messagebox.showinfo("Memory", f"Added {value} to memory (M = {memory})")
+    mem_label.config(text=f"M = ({memory}")
 
 def memory_subtract(value):
     global memory
